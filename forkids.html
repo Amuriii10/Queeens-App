@@ -1,0 +1,1786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quenss product section</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="homepage.css">
+</head>
+<style>
+    :root {
+            --ms-blue: #098628;
+            --text-White: #ffffff;
+        }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #fff; margin: 0; }
+.hero {
+  height:700px;
+  background:linear-gradient(rgba(0,50,30,0.7), rgba(0,50,30,0.7)),
+  url('img/electronics.jpg') ; 
+  background-size:cover;
+  display:flex;
+  align-items:center;
+  padding-left:60px;
+  color:white;
+}
+ 
+.hero h1{
+  font-size:36px;
+  display: flex;
+}
+
+        #heroCarousel { height: 95vh; position: relative; }
+
+        .carousel-inner, .carousel-item { height: 95%; }
+
+        .carousel-item img {    
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+
+        .hero-content {
+            position: absolute;
+            top: 35%;
+            left: 10%;
+            max-width: 500px;
+            color: var(--text-White);
+            z-index: 5;
+        }
+
+        .hero-content h1 {
+            font-weight: 600;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .btn-ms {
+            background-color: var(--ms-blue);
+            color: white;
+            border-radius: 2px;
+            padding: 10px 25px;
+            font-weight: 600;
+            border: none;
+        }
+
+        .ms-controls {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            z-index: 100;
+        }
+
+        .control-circle {
+            width: 40px;
+            height: 40px;
+            border: 1px solid rgba(0,0,0,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .btn-ms:hover { background-color: #08641e; }
+
+        .control-circle:hover { background: #f2f2f2; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+
+        .play-pause-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 18px;
+        }
+
+        .progress-line {
+            width: 40px;
+            height: 2px;
+            background: #ccc;
+            position: relative;
+        }
+
+        .progress-active {
+            position: absolute;
+            height: 100%;
+            width: 0%;
+            background: var(--ms-blue);
+        }
+:root {
+    --brand-green: #2e7d32; 
+    --action-green: #00c853;
+}
+
+.search-container {
+    background: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 6px 15px;
+    display: flex;
+    align-items: center;
+}
+.search-container input {
+    border: none;
+    outline: none;
+    width: 100%;
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.category-wrapper {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+.cat-item {
+    display: inline-block;
+    text-align: center;
+    width: 85px;
+    cursor: pointer;
+}
+.cat-box {
+    background: white;
+    height: 70px;
+    width: 70px;
+    margin: 0 auto 5px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: var(--brand-green);
+    border: 2px solid transparent;
+    transition: 0.3s;
+}
+.cat-item.active .cat-box {
+    border-color: var(--brand-green);
+    background-color: #f1f8f1;
+}
+.cat-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #444;
+    text-transform: lowercase;
+}
+ #heroCarousel { height: 90vh; position: relative; }
+
+        .carousel-inner, .carousel-item { height: 90%; }
+
+        .carousel-item img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+
+.product-card {
+    border-radius: 15px;
+    overflow: hidden;
+    border: none;
+    transition: transform 0.2s;
+}
+.product-card img {
+    height: 130px;
+    width: 100%;
+    object-fit: cover;
+}
+.price { color: var(--action-green); font-weight: 700; font-size: 14px; }
+.tag-veg { color: #2e7d32; font-size: 11px; font-weight: bold; }
+.tag-non { color: #d32f2f; font-size: 11px; font-weight: bold; }
+
+.btn-add {
+    background-color: var(--action-green);
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: bold;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+#vegetables-section, #fruits-section {
+    scroll-margin-top: 140px; 
+}
+.hero-contents {
+    position: absolute;
+    left: 5% !important; 
+    right: 5% !important;
+    width: 90% !important; 
+    margin: 0 auto;
+    
+    bottom: 20%; 
+    text-align: center; 
+    padding: 20px;
+    z-index: 10;
+}
+
+.carousel-item img {
+    width: 90% !important;
+    margin: 0 auto;
+    display: block;
+    border-radius: 15px;
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        left: 2.5% !important;
+        right: 2.5% !important;
+        width: 95% !important;
+        bottom: 10%;
+    }
+}
+.product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media (max-width: 576px) {
+    .product-card img {
+        height: 100px !important;
+    }
+    .product-card h6 {
+        font-size: 0.85rem;
+    }
+}
+.rating i {
+    cursor: pointer;
+    transition: 0.2s;
+}
+.rating i:hover {
+    transform: scale(1.2);
+}
+</style>
+<body class="bg-light">
+    <div class="container-fluid bg-white py-3 shadow-sm ">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-6 col-md-3">
+                    <h4 class="text-success align-center fw-bold mb-0 ml-5">QUEEN'S Superrmarket</h4>
+                </div>
+                <div class="col-md-6 d-none d-md-block">
+                    <div class="search-container">
+                        <i class="fas fa-search text-success"></i>
+                        <input type="text" id="main-search" placeholder="Search Items...">
+                    </div>
+                </div>
+                </div>
+            </div>
+    </div>
+
+
+   
+<nav class="navbar navbar-expand navbar-light bg-white border-bottom py-2 sticky-top " style="z-index: 1100;">
+
+    <div class="container-fluid px-2 px-md-3 d-flex align-items-center flex-nowrap">
+        <ul class="nav d-flex flex-row gap-1 gap-md-2 small list-unstyled mb-0 align-items-center">
+            <li><a class="nav-link p-1 text-dark fw-bold" style="font-size: 12px;" href="index.html">Home</a></li>
+            
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle p-1 text-dark fw-bold" href="#" id="prodDrop" role="button" data-bs-toggle="dropdown" style="font-size: 12px;">
+                    Products
+                </a>
+                <ul class="dropdown-menu shadow border-0 mt-2" aria-labelledby="prodDrop" style="border-radius: 10px; font-size: 13px;">
+                    <li><a class="dropdown-item" href="product.html">Fruits & Vegetables</a></li>
+                    <li><a class="nav-link text-dark dropdown-item" href="backery.html">Bakery & Drinks</a></li>
+                    <li><a class="dropdown-item" href="forkids.html">Electronics & For kids</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item fw-bold text-success" href="product.html">All Products</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item dropdown d-none d-sm-block">
+                <a class="nav-link dropdown-toggle p-1 text-dark fw-bold" href="#" id="suppDrop" role="button" data-bs-toggle="dropdown" style="font-size: 12px;">
+                    Support
+                </a>
+                <ul class="dropdown-menu shadow border-0 mt-2" aria-labelledby="suppDrop" style="border-radius: 10px; font-size: 13px;">
+                    <li><a class="dropdown-item" href="About.html"><i class="fas fa-headset me-2 text-success"></i>Help Center</a></li>
+                    <li><a class="dropdown-item" href="About.html"><i class="fas fa-truck me-2 text-success"></i>Track Order</a></li>
+                    <li><a class="dropdown-item" href="About.html"><i class="fas fa-undo me-2 text-success"></i>Return Policy</a></li>
+                    <li><a class="dropdown-item" href="About.html"><i class="fas fa-phone-alt me-2 text-success"></i>Contact Us</a></li>
+                </ul>
+            </li>
+        </ul>
+
+      
+        <div class="ms-auto d-flex align-items-center gap-1 gap-md-2">
+              <div class="d-flex align-items-center gap-2 text-dark small">
+
+            <div class="position-relative d-inline-block ms-3" data-bs-toggle="offcanvas" data-bs-target="#cartSidePanel" style="cursor: pointer;">
+    <i class="fas fa-shopping-basket fs-4 text-success mr-3"></i>
+    <span id="cart-badge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">0</span>
+</div>
+<li class="nav-item">
+    <a class="nav-link text-success fw-bold" href="#" data-bs-toggle="modal" data-bs-target="#ordersModal">
+        <i class="fas fa-clipboard-list"></i> My Orders
+    </a>
+</li>
+              </div>
+            <button id="lang-toggle" class="btn btn-sm btn-outline-success rounded-pill px-2 py-0" style="font-size: 10px; height: 26px;">አማርኛ</button>
+
+            <div id="logged-out-view" class="d-flex align-items-center gap-1">
+                <a class="text-decoration-none text-dark small d-none d-md-inline" style="font-size: 11px;" href="queenssignin.html">Sign up</a>
+                <button class="btn btn-dark btn-sm rounded-pill px-3 py-0" style="font-size: 11px; height: 26px;">
+                    <a class="text-white text-decoration-none" href="queenssignin.html">Log in</a>
+                </button>
+            </div>
+
+            <div id="logged-in-view" style="display: none !important;">
+                <div class="dropdown">
+                    <div class="d-flex align-items-center dropdown-toggle" role="button" id="userMenu" data-bs-toggle="dropdown" aria-expanded="false" style="cursor: pointer;">
+                        <i class="fas fa-user-circle fa-lg text-success me-1"></i>
+                        <span id="user-name-display" class="fw-bold small text-dark d-none d-sm-inline" style="font-size: 12px;">User</span>
+                    </div>
+                    <ul class="dropdown-menu dropdown-menu-end shadow border-0 mt-2" aria-labelledby="userMenu" style="border-radius: 12px; min-width: 140px;">
+                        <li><h6 class="dropdown-header small">My Account</h6></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li>
+                            <button onclick="logout()" class="dropdown-item text-danger small d-flex align-items-center gap-2">
+                                <i class="fas fa-sign-out-alt"></i> Logout
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</nav>
+    <style>
+    @media (min-width: 992px) {
+        .col-5-cols {
+        '[}
+        ]'
+            flex: 0 0 auto;
+            width: 20%; /* 100% / 5 = 20% */
+        }
+    }
+
+    @media (max-width: 991px) {
+        .col-5-cols {
+            flex: 0 0 auto;
+            width: 50%;
+        }
+    }
+</style>
+
+<section class="hero mb-5">
+    <div class="hero-content">
+        <h1>Fresh Groceries Delivered Fast</h1>
+        <p>Get your groceries delivered to your doorstep in under an hour.</p>
+      <h3><i class="bi  text-success"></i> Like Family...</h3>
+        <button ><a class="btn btn-success" href="product.html">Shop Now</a> </button>
+
+    </div>
+    
+</section>
+<div class="container-wide mt-5">
+
+<div class="row">
+    <div class="discount-header">
+        <h1 class="text-success">Electronics</h1>
+</div>
+<div class="col-md-3 col-sm-6 mb-4">
+    <div class="ms-card" style="background: transparent; border: none; height: 100%; display: flex; flex-direction: column;">
+        
+        <img src="imagesss/FRidge.jpg" alt="Fridge" style="height: 350px; object-fit: contain; width: 100%; padding: 10px;">
+        
+        <div class="ms-card-body" style="padding: 15px; flex-grow: 1; display: flex; flex-direction: column;">
+            <h6 class="fw-bold mb-1 text-success ms-card-title">Fridge</h6>
+            <small class="text-muted d-block mb-2 ml-4">Best quality Fridge</small>
+            
+            <div class="star-rating mb-2 ml-4" id="rating-Fridge" style="font-size: 1rem; cursor: pointer;">
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Fridge', 1)" data-val="1"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Fridge', 2)" data-val="2"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Fridge', 2)" data-val="2"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Fridge', 3)" data-val="3"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Fridge', 4)" data-val="4"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Fridge', 5)" data-val="5"></i>
+                <small class="text-muted" id="count-Fridge">(0)</small>
+            </div>
+
+            <div class="price-info mb-1">
+                <span class="text-muted text-decoration-line-through small ml-4">95000 Birrs</span>
+                <span class="text-success fw-bold fs-5 ms-2">80000 Birrs</span><br>
+                <span class="badge bg-danger ms-2 ml-4">15% OFF</span>
+            </div>
+
+            <div class="mt-auto ml-4">
+                <button id="btn-Fridge" class="btn btn-outline-success btn-sm w-80 mb-2 btn-success text-white" 
+                    onclick="toggleCart('Fridge', 90, 'btn-Fridge')"> 
+                    Add to Cart
+                </button>
+                <button class="btn btn-link btn-sm text-success p-0 text-decoration-none w-100 text-start d-flex align-items-center" 
+                    onclick="handleComment('Fridge')">
+                    <i class="far fa-comment-dots ml-1"></i> 
+                    <span class="ms-1">Review & Comments</span>
+                    <span class="badge bg-success ms-2 " id="comment-badge-Fridge">0</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="commentSection" style="display:none; position:fixed; top:20%; left:30%; width:40%; background:white; padding:20px; border:1px solid #ccc; z-index:1000; border-radius:10px; box-shadow: 0px 4px 15px rgba(0,0,0,0.2);">
+    <h5 id="modalTitle"></h5>
+    <div id="oldComments" style="max-height: 150px; overflow-y: auto; margin-bottom: 10px; font-size: 0.9rem; color: #555;"></div>
+    <textarea id="commentInput" class="form-control" placeholder="Write your comment..."></textarea>
+    <button class="btn btn-success btn-sm mt-2" onclick="saveComment()">Submit</button>
+    <button class="btn btn-light btn-sm mt-2" onclick="document.getElementById('commentSection').style.display='none'">Close</button>
+</div>
+
+<div class="col-md-3 col-sm-6 mb-4">
+    <div class="ms-card" style="background: transparent; border: none; height: 100%; display: flex; flex-direction: column;">
+        
+        <img src="imagesss/Washig.jpg" alt="washing" style="height: 350px; object-fit: contain; width: 100%; padding: 10px;">
+        
+        <div class="ms-card-body" style="padding: 15px; flex-grow: 1; display: flex; flex-direction: column;">
+            <h6 class="fw-bold mb-1 text-success ms-card-title">Washing Machine</h6>
+            <small class="text-muted d-block mb-2 ml-4">Best quality Machine</small>
+            
+            <div class="star-rating mb-2 ml-4" id="rating-Machine" style="font-size: 1rem; cursor: pointer;">
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Machine', 1)" data-val="1"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Machine', 2)" data-val="2"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Machine', 3)" data-val="3"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Machine', 4)" data-val="4"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Machine', 5)" data-val="5"></i>
+                <small class="text-muted" id="count-Machine">(0)</small>
+            </div>
+
+            <div class="price-info mb-1">
+                <span class="text-muted text-decoration-line-through small ml-4">100000 Birrs</span>
+                <span class="text-success fw-bold fs-5 ms-2">90000 Birrs</span><br>
+                <span class="badge bg-danger ms-2 ml-4">10% OFF</span>
+            </div>
+
+            <div class="mt-auto ml-4">
+                <button id="btn-Machine" class="btn btn-outline-success btn-sm w-80 mb-2 btn-success text-white" 
+                    onclick="toggleCart('Washing Machine', 90, 'btn-Machine')"> 
+                    Add to Cart
+                </button>
+                <button class="btn btn-link btn-sm text-success p-0 text-decoration-none w-100 text-start d-flex align-items-center" 
+                    onclick="handleComment('Washing Machine')">
+                    <i class="far fa-comment-dots ml-1"></i> 
+                    <span class="ms-1">Review & Comments</span>
+                    <span class="badge bg-success ms-2 comment-badge" id="comment-badge-Machine">0</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="commentSection" style="display:none; position:fixed; top:20%; left:30%; width:40%; background:white; padding:20px; border:1px solid #ccc; z-index:1000; border-radius:10px; box-shadow: 0px 4px 15px rgba(0,0,0,0.2);">
+    <h5 id="modalTitle"></h5>
+    <div id="oldComments" style="max-height: 150px; overflow-y: auto; margin-bottom: 10px; font-size: 0.9rem; color: #555;"></div>
+    <textarea id="commentInput" class="form-control" placeholder="Write your comment..."></textarea>
+    <button class="btn btn-success btn-sm mt-2" onclick="saveComment()">Submit</button>
+    <button class="btn btn-light btn-sm mt-2" onclick="document.getElementById('commentSection').style.display='none'">Close</button>
+</div>
+
+<div class="col-md-3 col-sm-6 mb-4">
+    <div class="ms-card" style="background: transparent; border: none; height: 100%; display: flex; flex-direction: column;">
+        
+        <img src="img/stove.jpg" alt="Stove" style="height: 350px; object-fit: contain; width: 100%; padding: 10px;">
+        
+        <div class="ms-card-body" style="padding: 15px; flex-grow: 1; display: flex; flex-direction: column;">
+            <h6 class="fw-bold mb-1 text-success ms-card-title">Stove</h6>
+            <small class="text-muted d-block mb-2 ml-4">Best quality Stove</small>
+            
+            <div class="star-rating mb-2 ml-4" id="rating-Stove" style="font-size: 1rem; cursor: pointer;">
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Stove', 1)" data-val="1"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Stove', 2)" data-val="2"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Stove', 3)" data-val="3"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Stove', 4)" data-val="4"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Stove', 5)" data-val="5"></i>
+                <small class="text-muted" id="count-Stove">(0)</small>
+            </div>
+
+            <div class="price-info mb-1">
+                <span class="text-muted text-decoration-line-through small ml-4">18000 Birrs</span>
+                <span class="text-success fw-bold fs-5 ms-2">16000 Birrs</span><br>
+                <span class="badge bg-danger ms-2 ml-4">15% OFF</span>
+            </div>
+
+            <div class="mt-auto ml-4">
+                <button id="btn-Stove" class="btn btn-outline-success btn-sm w-80 mb-2 btn-success text-white" 
+                    onclick="toggleCart('Stove', 90, 'btn-Stove')"> 
+                    Add to Cart
+                </button>
+                <button class="btn btn-link btn-sm text-success p-0 text-decoration-none w-100 text-start d-flex align-items-center" 
+                    onclick="handleComment('Stove')">
+                    <i class="far fa-comment-dots ml-1"></i> 
+                    <span class="ms-1">Review & Comments</span>
+                    <span class="badge bg-success ms-2" id="comment-badge-Stove">0</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="commentSection" style="display:none; position:fixed; top:20%; left:30%; width:40%; background:white; padding:20px; border:1px solid #ccc; z-index:1000; border-radius:10px; box-shadow: 0px 4px 15px rgba(0,0,0,0.2);">
+    <h5 id="modalTitle"></h5>
+    <div id="oldComments" style="max-height: 150px; overflow-y: auto; margin-bottom: 10px; font-size: 0.9rem; color: #555;"></div>
+    <textarea id="commentInput" class="form-control" placeholder="Write your comment..."></textarea>
+    <button class="btn btn-success btn-sm mt-2" onclick="saveComment()">Submit</button>
+    <button class="btn btn-light btn-sm mt-2" onclick="document.getElementById('commentSection').style.display='none'">Close</button>
+</div>
+
+<div class="col-md-3 col-sm-6 mb-4">
+    <div class="ms-card" style="background: transparent; border: none; height: 100%; display: flex; flex-direction: column;">
+        
+        <img src="img/tv.jpg" alt="smart_tv" style="height: 350px; object-fit: contain; width: 100%; padding: 10px;">
+        
+        <div class="ms-card-body" style="padding: 15px; flex-grow: 1; display: flex; flex-direction: column;">
+            <h6 class="fw-bold mb-1 text-success ms-card-title">Smart Tv</h6>
+            <small class="text-muted d-block mb-2 ml-4">Best quality Smart Tv</small>
+            
+            <div class="star-rating mb-2 ml-4" id="rating-Tv" style="font-size: 1rem; cursor: pointer;">
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Tv', 1)" data-val="1"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Tv', 2)" data-val="2"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Tv', 3)" data-val="3"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Tv', 4)" data-val="4"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Tv', 5)" data-val="5"></i>
+                <small class="text-muted" id="count-Tv">(0)</small>
+            </div>
+
+            <div class="price-info mb-1">
+                <span class="text-muted text-decoration-line-through small ml-4">80000 Birrs</span>
+                <span class="text-success fw-bold fs-5 ms-2">70000 Birrs</span><br>
+                <span class="badge bg-danger ms-2 ml-4">10% OFF</span>
+            </div>
+
+            <div class="mt-auto ml-4">
+                <button id="btn-Tv" class="btn btn-outline-success btn-sm w-80 mb-2 btn-success text-white" 
+                    onclick="toggleCart('Smart Tv', 90, 'btn-Tv')"> 
+                    Add to Cart
+                </button>
+                <button class="btn btn-link btn-sm text-success p-0 text-decoration-none w-100 text-start d-flex align-items-center" 
+                    onclick="handleComment('Smart Tv')">
+                    <i class="far fa-comment-dots ml-1"></i> 
+                    <span class="ms-1">Review & Comments</span>
+                    <span class="badge bg-success ms-2 " id="comment-badge-Tv">0</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-wide mt-5">
+<div class="row">
+
+<div class="col-md-3 col-sm-6 mb-4">
+    <div class="ms-card" style="background: transparent; border: none; height: 100%; display: flex; flex-direction: column;">
+        
+        <img src="img/speakers.jpg" alt="speakers" style="height: 350px; object-fit: contain; width: 100%; padding: 10px;">
+        
+        <div class="ms-card-body" style="padding: 15px; flex-grow: 1; display: flex; flex-direction: column;">
+            <h6 class="fw-bold mb-1 text-success ms-card-title">Speakers</h6>
+            <small class="text-muted d-block mb-2 ml-4">Best quality Speakers</small>
+            
+            <div class="star-rating mb-2 ml-4" id="rating-Speakers" style="font-size: 1rem; cursor: pointer;">
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Speakers', 1)" data-val="1"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Speakers', 2)" data-val="2"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Speakers', 3)" data-val="3"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Speakers', 4)" data-val="4"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Speakers', 5)" data-val="5"></i>
+                <small class="text-muted" id="count-Speakers">(0)</small>
+            </div>
+
+            <div class="price-info mb-1">
+                <span class="text-muted text-decoration-line-through small ml-4">18000 Birrs</span>
+                <span class="text-success fw-bold fs-5 ms-2">18000 Birrs</span><br>
+                <span class="badge bg-danger ms-2 ml-4">% OFF</span>
+            </div>
+
+            <div class="mt-auto ml-4">
+                <button id="btn-Speakers" class="btn btn-outline-success btn-sm w-80 mb-2 btn-success text-white" 
+                    onclick="toggleCart('Speakers', 90, 'btn-Speakers')"> 
+                    Add to Cart
+                </button>
+                <button class="btn btn-link btn-sm text-success p-0 text-decoration-none w-100 text-start d-flex align-items-center" 
+                    onclick="handleComment('Speakers')">
+                    <i class="far fa-comment-dots ml-1"></i> 
+                    <span class="ms-1">Review & Comments</span>
+                    <span class="badge bg-success ms-2 " id="comment-badge-Speakers">0</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="commentSection" style="display:none; position:fixed; top:20%; left:30%; width:40%; background:white; padding:20px; border:1px solid #ccc; z-index:1000; border-radius:10px; box-shadow: 0px 4px 15px rgba(0,0,0,0.2);">
+    <h5 id="modalTitle"></h5>
+    <div id="oldComments" style="max-height: 150px; overflow-y: auto; margin-bottom: 10px; font-size: 0.9rem; color: #555;"></div>
+    <textarea id="commentInput" class="form-control" placeholder="Write your comment..."></textarea>
+    <button class="btn btn-success btn-sm mt-2" onclick="saveComment()">Submit</button>
+    <button class="btn btn-light btn-sm mt-2" onclick="document.getElementById('commentSection').style.display='none'">Close</button>
+</div>
+
+<div class="col-md-3 col-sm-6 mb-4">
+    <div class="ms-card" style="background: transparent; border: none; height: 100%; display: flex; flex-direction: column;">
+        
+        <img src="img/router.jpg" alt="Routers" style="height: 350px; object-fit: contain; width: 100%; padding: 10px;">
+        
+        <div class="ms-card-body" style="padding: 15px; flex-grow: 1; display: flex; flex-direction: column;">
+            <h6 class="fw-bold mb-1 text-success ms-card-title">Routers</h6>
+            <small class="text-muted d-block mb-2 ml-4">Best quality Routers</small>
+            
+            <div class="star-rating mb-2 ml-4" id="rating-Routers" style="font-size: 1rem; cursor: pointer;">
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Routers', 1)" data-val="1"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Routers', 2)" data-val="2"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Routers', 3)" data-val="3"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Routers', 4)" data-val="4"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Routers', 5)" data-val="5"></i>
+                <small class="text-muted" id="count-Routers">(0)</small>
+            </div>
+
+            <div class="price-info mb-1">
+                <span class="text-muted text-decoration-line-through small ml-4">8000 Birrs</span>
+                <span class="text-success fw-bold fs-5 ms-2">7000 Birrs</span><br>
+                <span class="badge bg-danger ms-2 ml-4">10% OFF</span>
+            </div>
+
+            <div class="mt-auto ml-4">
+                <button id="btn-Routers" class="btn btn-outline-success btn-sm w-80 mb-2 btn-success text-white" 
+                    onclick="toggleCart('Routers', 90, 'btn-Routers')"> 
+                    Add to Cart
+                </button>
+                <button class="btn btn-link btn-sm text-success p-0 text-decoration-none w-100 text-start d-flex align-items-center" 
+                    onclick="handleComment('Routers')">
+                    <i class="far fa-comment-dots ml-1"></i> 
+                    <span class="ms-1">Review & Comments</span>
+                    <span class="badge bg-success ms-2 comment-badge" id="comment-badge-Routers">0</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="commentSection" style="display:none; position:fixed; top:20%; left:30%; width:40%; background:white; padding:20px; border:1px solid #ccc; z-index:1000; border-radius:10px; box-shadow: 0px 4px 15px rgba(0,0,0,0.2);">
+    <h5 id="modalTitle"></h5>
+    <div id="oldComments" style="max-height: 150px; overflow-y: auto; margin-bottom: 10px; font-size: 0.9rem; color: #555;"></div>
+    <textarea id="commentInput" class="form-control" placeholder="Write your comment..."></textarea>
+    <button class="btn btn-success btn-sm mt-2" onclick="saveComment()">Submit</button>
+    <button class="btn btn-light btn-sm mt-2" onclick="document.getElementById('commentSection').style.display='none'">Close</button>
+</div>
+
+<div class="col-md-3 col-sm-6 mb-4">
+    <div class="ms-card" style="background: transparent; border: none; height: 100%; display: flex; flex-direction: column;">
+        
+        <img src="img/Adapter.jpg" alt="Adapter" style="height: 350px; object-fit: contain; width: 100%; padding: 10px;">
+        
+        <div class="ms-card-body" style="padding: 15px; flex-grow: 1; display: flex; flex-direction: column;">
+            <h6 class="fw-bold mb-1 text-success ms-card-title">Adaptert</h6>
+            <small class="text-muted d-block mb-2 ml-4">Best quality Adapter</small>
+            
+            <div class="star-rating mb-2 ml-4" id="rating-Adapter" style="font-size: 1rem; cursor: pointer;">
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Adapter', 1)" data-val="1"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Adapter', 2)" data-val="2"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Adapter', 3)" data-val="3"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Adapter', 4)" data-val="4"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Adapter', 5)" data-val="5"></i>
+                <small class="text-muted" id="count-Adapter">(0)</small>
+            </div>
+
+            <div class="price-info mb-1">
+                <span class="text-muted text-decoration-line-through small ml-4">2000 Birrs</span>
+                <span class="text-success fw-bold fs-5 ms-2">1500 Birrs</span><br>
+                <span class="badge bg-danger ms-2 ml-4">25% OFF</span>
+            </div>
+
+            <div class="mt-auto ml-4">
+                <button id="btn-Adapter" class="btn btn-outline-success btn-sm w-80 mb-2 btn-success text-white" 
+                    onclick="toggleCart('Adapter', 90, 'btn-Adapter')"> 
+                    Add to Cart
+                </button>
+                <button class="btn btn-link btn-sm text-success p-0 text-decoration-none w-100 text-start d-flex align-items-center" 
+                    onclick="handleComment('Adapter')">
+                    <i class="far fa-comment-dots ml-1"></i> 
+                    <span class="ms-1">Review & Comments</span>
+                    <span class="badge bg-success ms-2" id="comment-badge-Adapter">0</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="commentSection" style="display:none; position:fixed; top:20%; left:30%; width:40%; background:white; padding:20px; border:1px solid #ccc; z-index:1000; border-radius:10px; box-shadow: 0px 4px 15px rgba(0,0,0,0.2);">
+    <h5 id="modalTitle"></h5>
+    <div id="oldComments" style="max-height: 150px; overflow-y: auto; margin-bottom: 10px; font-size: 0.9rem; color: #555;"></div>
+    <textarea id="commentInput" class="form-control" placeholder="Write your comment..."></textarea>
+    <button class="btn btn-success btn-sm mt-2" onclick="saveComment()">Submit</button>
+    <button class="btn btn-light btn-sm mt-2" onclick="document.getElementById('commentSection').style.display='none'">Close</button>
+</div>
+
+<div class="col-md-3 col-sm-6 mb-4">
+    <div class="ms-card" style="background: transparent; border: none; height: 100%; display: flex; flex-direction: column;">
+        
+        <img src="img/bulbs.jpg" alt="Bulbs" style="height: 350px; object-fit: contain; width: 100%; padding: 10px;">
+        
+        <div class="ms-card-body" style="padding: 15px; flex-grow: 1; display: flex; flex-direction: column;">
+            <h6 class="fw-bold mb-1 text-success ms-card-title">BulBs</h6>
+            <small class="text-muted d-block mb-2 ml-4">Best quality Bulbs</small>
+            
+            <div class="star-rating mb-2 ml-4" id="rating- Bulbs" style="font-size: 1rem; cursor: pointer;">
+                <i class="fa fa-star text-secondary" onclick="rateProduct(' Bulbs', 1)" data-val="1"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct( 'Bulbs', 2)" data-val="2"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct(' Bulbs', 3)" data-val="3"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct(' Bulbs', 4)" data-val="4"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct(' Bulbs', 5)" data-val="5"></i>
+                <small class="text-muted" id="count- Bulbs">(0)</small>
+            </div>
+
+            <div class="price-info mb-1">
+                <span class="text-muted text-decoration-line-through small ml-4">500 Birrs</span>
+                <span class="text-success fw-bold fs-5 ms-2">400 Birrs</span><br>
+                <span class="badge bg-danger ms-2 ml-4">10% OFF</span>
+            </div>
+
+            <div class="mt-auto ml-4">
+                <button id="btn- Bulbs" class="btn btn-outline-success btn-sm w-80 mb-2 btn-success text-white" 
+                    onclick="toggleCart(' Bulbs', 90, 'btn- Bulbs')"> 
+                    Add to Cart
+                </button>
+                <button class="btn btn-link btn-sm text-success p-0 text-decoration-none w-100 text-start d-flex align-items-center" 
+                    onclick="handleComment(' Bulbs')">
+                    <i class="far fa-comment-dots ml-1"></i> 
+                    <span class="ms-1">Review & Comments</span>
+                    <span class="badge bg-success ms-2 " id="comment-badge- Bulbs">0</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="discount-header">
+        <h1 class="text-success">Home</h1>
+</div>
+<div class="col-md-3 col-sm-6 mb-4">
+    <div class="ms-card" style="background: transparent; border: none; height: 100%; display: flex; flex-direction: column;">
+        
+        <img src="imagesss/Foam.jpg" alt="Foam" style="height: 350px; object-fit: contain; width: 100%; padding: 10px;">
+        
+        <div class="ms-card-body" style="padding: 15px; flex-grow: 1; display: flex; flex-direction: column;">
+            <h6 class="fw-bold mb-1 text-success ms-card-title">Maleda Foam</h6>
+            <small class="text-muted d-block mb-2 ml-4">Best quality Foam</small>
+            
+            <div class="star-rating mb-2 ml-4" id="rating-Foam" style="font-size: 1rem; cursor: pointer;">
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Foam', 1)" data-val="1"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Foam', 2)" data-val="2"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Foam', 3)" data-val="3"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Foam', 4)" data-val="4"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Foam', 5)" data-val="5"></i>
+                <small class="text-muted" id="count-Foam">(0)</small>
+            </div>
+
+            <div class="price-info mb-1">
+                <span class="text-muted text-decoration-line-through small ml-4">40000 Birrs</span>
+                <span class="text-success fw-bold fs-5 ms-2">37000 Birrs</span><br>
+                <span class="badge bg-danger ms-2 ml-4">7% OFF</span>
+            </div>
+
+            <div class="mt-auto ml-4">
+                <button id="btn-Foam" class="btn btn-outline-success btn-sm w-80 mb-2 btn-success text-white" 
+                    onclick="toggleCart('Foam', 90, 'btn-Foam')"> 
+                    Add to Cart
+                </button>
+                <button class="btn btn-link btn-sm text-success p-0 text-decoration-none w-100 text-start d-flex align-items-center" 
+                    onclick="handleComment('Foam')">
+                    <i class="far fa-comment-dots ml-1"></i> 
+                    <span class="ms-1">Review & Comments</span>
+                    <span class="badge bg-success ms-2 " id="comment-badge-Foam">0</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-3 col-sm-6 mb-4">
+    <div class="ms-card" style="background: transparent; border: none; height: 100%; display: flex; flex-direction: column;">
+        
+        <img src="img/sofa.jpg" alt="Sofa" style="height: 350px; object-fit: contain; width: 100%; padding: 10px;">
+        
+        <div class="ms-card-body" style="padding: 15px; flex-grow: 1; display: flex; flex-direction: column;">
+            <h6 class="fw-bold mb-1 text-success ms-card-title">Sofa</h6>
+            <small class="text-muted d-block mb-2 ml-4">Best quality Sofa</small>
+            
+            <div class="star-rating mb-2 ml-4" id="rating-Sofa" style="font-size: 1rem; cursor: pointer;">
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Sofa', 1)" data-val="1"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Sofa', 2)" data-val="2"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Sofa', 3)" data-val="3"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Sofa', 4)" data-val="4"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Sofa', 5)" data-val="5"></i>
+                <small class="text-muted" id="count-Sofa">(0)</small>
+            </div>
+
+            <div class="price-info mb-1">
+                <span class="text-muted text-decoration-line-through small ml-4">180000 Birrs</span>
+                <span class="text-success fw-bold fs-5 ms-2">160000 Birrs</span><br>
+                <span class="badge bg-danger ms-2 ml-4">10% OFF</span>
+            </div>
+
+            <div class="mt-auto ml-4">
+                <button id="btn-Sofa" class="btn btn-outline-success btn-sm w-80 mb-2 btn-success text-white" 
+                    onclick="toggleCart('Sofa', 90, 'btn-Sofa')"> 
+                    Add to Cart
+                </button>
+                <button class="btn btn-link btn-sm text-success p-0 text-decoration-none w-100 text-start d-flex align-items-center" 
+                    onclick="handleComment('Sofa')">
+                    <i class="far fa-comment-dots ml-1"></i> 
+                    <span class="ms-1">Review & Comments</span>
+                    <span class="badge bg-success ms-2 " id="comment-badge-Sofa">0</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-3 col-sm-6 mb-4">
+    <div class="ms-card" style="background: transparent; border: none; height: 100%; display: flex; flex-direction: column;">
+        
+        <img src="img/]stnad.jpg" alt="Tv Stand" style="height: 350px; object-fit: contain; width: 100%; padding: 10px;">
+        
+        <div class="ms-card-body" style="padding: 15px; flex-grow: 1; display: flex; flex-direction: column;">
+            <h6 class="fw-bold mb-1 text-success ms-card-title">Tv Stand</h6>
+            <small class="text-muted d-block mb-2 ml-4">Best quality Tv Stand</small>
+            
+            <div class="star-rating mb-2 ml-4" id="rating-Stand" style="font-size: 1rem; cursor: pointer;">
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Stand', 1)" data-val="1"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Stand', 2)" data-val="2"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Stand', 3)" data-val="3"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Stand', 4)" data-val="4"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Stand', 5)" data-val="5"></i>
+                <small class="text-muted" id="count-Stand">(0)</small>
+            </div>
+
+            <div class="price-info mb-1">
+                <span class="text-muted text-decoration-line-through small ml-4">40000 Birrs</span>
+                <span class="text-success fw-bold fs-5 ms-2">30000 Birrs</span><br>
+                <span class="badge bg-danger ms-2 ml-4">10% OFF</span>
+            </div>
+
+            <div class="mt-auto ml-4">
+                <button id="btn-Stand" class="btn btn-outline-success btn-sm w-80 mb-2 btn-success text-white" 
+                    onclick="toggleCart('Stand', 90, 'btn-Stand')"> 
+                    Add to Cart
+                </button>
+                <button class="btn btn-link btn-sm text-success p-0 text-decoration-none w-100 text-start d-flex align-items-center" 
+                    onclick="handleComment('Stand')">
+                    <i class="far fa-comment-dots ml-1"></i> 
+                    <span class="ms-1">Review & Comments</span>
+                    <span class="badge bg-success ms-2 comment-badge" id="comment-badge-Stand">0</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="commentSection" style="display:none; position:fixed; top:20%; left:30%; width:40%; background:white; padding:20px; border:1px solid #ccc; z-index:1000; border-radius:10px; box-shadow: 0px 4px 15px rgba(0,0,0,0.2);">
+    <h5 id="modalTitle"></h5>
+    <div id="oldComments" style="max-height: 150px; overflow-y: auto; margin-bottom: 10px; font-size: 0.9rem; color: #555;"></div>
+    <textarea id="commentInput" class="form-control" placeholder="Write your comment..."></textarea>
+    <button class="btn btn-success btn-sm mt-2" onclick="saveComment()">Submit</button>
+    <button class="btn btn-light btn-sm mt-2" onclick="document.getElementById('commentSection').style.display='none'">Close</button>
+</div>
+
+<div class="col-md-3 col-sm-6 mb-4">
+    <div class="ms-card" style="background: transparent; border: none; height: 100%; display: flex; flex-direction: column;">
+        
+        <img src="img/mat.jpg" alt="Mat" style="height: 350px; object-fit: contain; width: 100%; padding: 10px;">
+        
+        <div class="ms-card-body" style="padding: 15px; flex-grow: 1; display: flex; flex-direction: column;">
+            <h6 class="fw-bold mb-1 text-success ms-card-title">Mat</h6>
+            <small class="text-muted d-block mb-2 ml-4">Best quality Mat</small>
+            
+            <div class="star-rating mb-2 ml-4" id="rating-Mat" style="font-size: 1rem; cursor: pointer;">
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Mat', 1)" data-val="1"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Mat', 2)" data-val="2"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Mat', 3)" data-val="3"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Mat', 4)" data-val="4"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Mat', 5)" data-val="5"></i>
+                <small class="text-muted" id="count-Mat">(0)</small>
+            </div>
+
+            <div class="price-info mb-1">
+                <span class="text-muted text-decoration-line-through small ml-4">800 Birrs</span>
+                <span class="text-success fw-bold fs-5 ms-2">700 Birrs</span><br>
+                <span class="badge bg-danger ms-2 ml-4">10% OFF</span>
+            </div>
+
+            <div class="mt-auto ml-4">
+                <button id="btn-Mat" class="btn btn-outline-success btn-sm w-80 mb-2 btn-success text-white" 
+                    onclick="toggleCart('Mat', 90, 'btn-Mat')"> 
+                    Add to Cart
+                </button>
+                <button class="btn btn-link btn-sm text-success p-0 text-decoration-none w-100 text-start d-flex align-items-center" 
+                    onclick="handleComment('Mat')">
+                    <i class="far fa-comment-dots ml-1"></i> 
+                    <span class="ms-1">Review & Comments</span>
+                    <span class="badge bg-success ms-2 " id="comment-badge-Mat">0</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        
+
+ <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        
+        <div class="carousel-item active">
+            <div class="position-relative" style="height: 500px; overflow: hidden;">
+                <img src="img/kids.jpg" class="d-block w-100 h-100" alt="Kids" style="object-fit: cover;">
+                
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column align-items-center justify-content-center text-center text-white" 
+                     style=" padding: 20px;">
+                    <h1 class="display-4 fw-bold">Everything Your Kids Need</h1>
+                    <p class="fs-5">Quality products, toys, and essentials to keep your family happy and healthy.</p>
+                    <button class="btn btn-success btn-lg rounded-pill px-5 mt-3 shadow">Shop Kids Section</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <div class="position-relative" style="height: 500px; overflow: hidden;">
+                <img src="img/istockphoto-1174598707-1024x1024.jpg" class="d-block w-100 h-100" alt="Home Appliances" style="object-fit: cover;">
+                
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column align-items-center justify-content-center text-center text-white" 
+                     style=" padding: 20px;">
+                    <h1 class="display-4 fw-bold">Modernize Your Home</h1>
+                    <p class="fs-5">Upgrade your lifestyle with our premium selection of reliable home appliances.</p>
+                    <button class="btn btn-success btn-lg rounded-pill px-5 mt-3 shadow">Shop Home Essentials</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="ms-controls mt-2 mb-5 d-flex align-items-center justify-content-center gap-3">
+        <div class="control-circle" style="cursor:pointer;" onclick="carouselInstance.prev()">
+            <span style="transform: scaleX(-1); display: inline-block;">➔</span>
+        </div>
+        <div class="play-pause-container d-flex align-items-center gap-2">
+            <div class="progress-line" style="width: 100px; height: 4px; background: #ddd; position: relative; overflow: hidden;">
+                <div class="progress-active" id="bar" style="width: 0%; height: 100%; background: #000; position: absolute;"></div>
+            </div>
+            <div id="playPauseBtn" style="cursor:pointer; width: 20px;">⏸</div>
+        </div>
+        <div class="control-circle" style="cursor:pointer;" onclick="carouselInstance.next()">
+            <span>➔</span>
+        </div>
+    </div>
+</div>
+<div class="container-wide mt-5">
+
+<div class="row">
+    <div class="row">
+    <div class="discount-header">
+        <h1 class="text-success">For kids</h1>
+</div>
+<div class="col-md-3 col-sm-6 mb-4">
+    <div class="ms-card" style="background: transparent; border: none; height: 100%; display: flex; flex-direction: column;">
+        
+        <img src="img/trouser.jpg" alt="Trousers" style="height: 350px; object-fit: contain; width: 100%; padding: 10px;">
+        
+        <div class="ms-card-body" style="padding: 15px; flex-grow: 1; display: flex; flex-direction: column;">
+            <h6 class="fw-bold mb-1 text-success ms-card-title">Babay Trousers</h6>
+            <small class="text-muted d-block mb-2 ml-4">Best quality Trousers</small>
+            
+            <div class="star-rating mb-2 ml-4" id="rating-Trousers" style="font-size: 1rem; cursor: pointer;">
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Trousers', 1)" data-val="1"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Trousers', 2)" data-val="2"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Trousers', 3)" data-val="3"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Trousers', 4)" data-val="4"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Trousers', 5)" data-val="5"></i>
+                <small class="text-muted" id="count-Trousers">(0)</small>
+            </div>
+
+            <div class="price-info mb-1">
+                <span class="text-muted text-decoration-line-through small ml-4">4000 Birrs</span>
+                <span class="text-success fw-bold fs-5 ms-2">3500 Birrs</span><br>
+                <span class="badge bg-danger ms-2 ml-4">10% OFF</span>
+            </div>
+
+            <div class="mt-auto ml-4">
+                <button id="btn-Trousers" class="btn btn-outline-success btn-sm w-80 mb-2 btn-success text-white" 
+                    onclick="toggleCart(' Babay Trousers', 90, 'btn-Trousers')"> 
+                    Add to Cart
+                </button>
+                <button class="btn btn-link btn-sm text-success p-0 text-decoration-none w-100 text-start d-flex align-items-center" 
+                    onclick="handleComment('Babay Trousers')">
+                    <i class="far fa-comment-dots ml-1"></i> 
+                    <span class="ms-1">Review & Comments</span>
+                    <span class="badge bg-success ms-2 " id="comment-badge-Trousers">0</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="commentSection" style="display:none; position:fixed; top:20%; left:30%; width:40%; background:white; padding:20px; border:1px solid #ccc; z-index:1000; border-radius:10px; box-shadow: 0px 4px 15px rgba(0,0,0,0.2);">
+    <h5 id="modalTitle"></h5>
+    <div id="oldComments" style="max-height: 150px; overflow-y: auto; margin-bottom: 10px; font-size: 0.9rem; color: #555;"></div>
+    <textarea id="commentInput" class="form-control" placeholder="Write your comment..."></textarea>
+    <button class="btn btn-success btn-sm mt-2" onclick="saveComment()">Submit</button>
+    <button class="btn btn-light btn-sm mt-2" onclick="document.getElementById('commentSection').style.display='none'">Close</button>
+</div>
+
+<div class="col-md-3 col-sm-6 mb-4">
+    <div class="ms-card" style="background: transparent; border: none; height: 100%; display: flex; flex-direction: column;">
+        
+        <img src="img/cape.jpg" alt="cape" style="height: 350px; object-fit: contain; width: 100%; padding: 10px;">
+        
+        <div class="ms-card-body" style="padding: 15px; flex-grow: 1; display: flex; flex-direction: column;">
+            <h6 class="fw-bold mb-1 text-success ms-card-title">Babay Cape</h6>
+            <small class="text-muted d-block mb-2 ml-4">Best quality Cape</small>
+            
+            <div class="star-rating mb-2 ml-4" id="rating-Cape" style="font-size: 1rem; cursor: pointer;">
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Cape', 1)" data-val="1"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Cape', 2)" data-val="2"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Cape', 3)" data-val="3"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Cape', 4)" data-val="4"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Cape', 5)" data-val="5"></i>
+                <small class="text-muted" id="count-Cape">(0)</small>
+            </div>
+
+            <div class="price-info mb-1">
+                <span class="text-muted text-decoration-line-through small ml-4">1600irrs</span>
+                <span class="text-success fw-bold fs-5 ms-2">1500 Birrs</span><br>
+                <span class="badge bg-danger ms-2 ml-4">7% OFF</span>
+            </div>
+
+            <div class="mt-auto ml-4">
+                <button id="btn-Cape" class="btn btn-outline-success btn-sm w-80 mb-2 btn-success text-white" 
+                    onclick="toggleCart('Babay Cape', 90, 'btn-Cape')"> 
+                    Add to Cart
+                </button>
+                <button class="btn btn-link btn-sm text-success p-0 text-decoration-none w-100 text-start d-flex align-items-center" 
+                    onclick="handleComment('Babay Cape')">
+                    <i class="far fa-comment-dots ml-1"></i> 
+                    <span class="ms-1">Review & Comments</span>
+                    <span class="badge bg-success ms-2 comment-badge" id="comment-badge-Cape">0</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="commentSection" style="display:none; position:fixed; top:20%; left:30%; width:40%; background:white; padding:20px; border:1px solid #ccc; z-index:1000; border-radius:10px; box-shadow: 0px 4px 15px rgba(0,0,0,0.2);">
+    <h5 id="modalTitle"></h5>
+    <div id="oldComments" style="max-height: 150px; overflow-y: auto; margin-bottom: 10px; font-size: 0.9rem; color: #555;"></div>
+    <textarea id="commentInput" class="form-control" placeholder="Write your comment..."></textarea>
+    <button class="btn btn-success btn-sm mt-2" onclick="saveComment()">Submit</button>
+    <button class="btn btn-light btn-sm mt-2" onclick="document.getElementById('commentSection').style.display='none'">Close</button>
+</div>
+
+<div class="col-md-3 col-sm-6 mb-4">
+    <div class="ms-card" style="background: transparent; border: none; height: 100%; display: flex; flex-direction: column;">
+        
+        <img src="img/red.jpg" alt="REd Shose" style="height: 350px; object-fit: contain; width: 100%; padding: 10px;">
+        
+        <div class="ms-card-body" style="padding: 15px; flex-grow: 1; display: flex; flex-direction: column;">
+            <h6 class="fw-bold mb-1 text-success ms-card-title">Red Shose</h6>
+            <small class="text-muted d-block mb-2 ml-4">Best quality Shose</small>
+            
+            <div class="star-rating mb-2 ml-4" id="rating-Shose" style="font-size: 1rem; cursor: pointer;">
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Shose', 1)" data-val="1"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Shose', 2)" data-val="2"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Shose', 3)" data-val="3"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Shose', 4)" data-val="4"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Shose', 5)" data-val="5"></i>
+                <small class="text-muted" id="count-Shose">(0)</small>
+            </div>
+
+            <div class="price-info mb-1">
+                <span class="text-muted text-decoration-line-through small ml-4">4000 Birrs</span>
+                <span class="text-success fw-bold fs-5 ms-2">3000 Birrs</span><br>
+                <span class="badge bg-danger ms-2 ml-4">25% OFF</span>
+            </div>
+
+            <div class="mt-auto ml-4">
+                <button id="btn-Shose" class="btn btn-outline-success btn-sm w-80 mb-2 btn-success text-white" 
+                    onclick="toggleCart('Shose', 90, 'btn-Shose')"> 
+                    Add to Cart
+                </button>
+                <button class="btn btn-link btn-sm text-success p-0 text-decoration-none w-100 text-start d-flex align-items-center" 
+                    onclick="handleComment('Shose')">
+                    <i class="far fa-comment-dots ml-1"></i> 
+                    <span class="ms-1">Review & Comments</span>
+                    <span class="badge bg-success ms-2" id="comment-badge-Shose">0</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="commentSection" style="display:none; position:fixed; top:20%; left:30%; width:40%; background:white; padding:20px; border:1px solid #ccc; z-index:1000; border-radius:10px; box-shadow: 0px 4px 15px rgba(0,0,0,0.2);">
+    <h5 id="modalTitle"></h5>
+    <div id="oldComments" style="max-height: 150px; overflow-y: auto; margin-bottom: 10px; font-size: 0.9rem; color: #555;"></div>
+    <textarea id="commentInput" class="form-control" placeholder="Write your comment..."></textarea>
+    <button class="btn btn-success btn-sm mt-2" onclick="saveComment()">Submit</button>
+    <button class="btn btn-light btn-sm mt-2" onclick="document.getElementById('commentSection').style.display='none'">Close</button>
+</div>
+
+<div class="col-md-3 col-sm-6 mb-4">
+    <div class="ms-card" style="background: transparent; border: none; height: 100%; display: flex; flex-direction: column;">
+        
+        <img src="img/shemiz.jpg" alt="Shemiz" style="height: 350px; object-fit: contain; width: 100%; padding: 10px;">
+        
+        <div class="ms-card-body" style="padding: 15px; flex-grow: 1; display: flex; flex-direction: column;">
+            <h6 class="fw-bold mb-1 text-success ms-card-title"> Babay Shemiz</h6>
+            <small class="text-muted d-block mb-2 ml-4">Best quality Shemiz</small>
+            
+            <div class="star-rating mb-2 ml-4" id="rating-Shemiz" style="font-size: 1rem; cursor: pointer;">
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Shemiz', 1)" data-val="1"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Shemiz', 2)" data-val="2"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Shemiz', 3)" data-val="3"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Shemiz', 4)" data-val="4"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Shemiz', 5)" data-val="5"></i>
+                <small class="text-muted" id="count-Shemiz">(0)</small>
+            </div>
+
+            <div class="price-info mb-1">
+                <span class="text-muted text-decoration-line-through small ml-4">2000 Birrs</span>
+                <span class="text-success fw-bold fs-5 ms-2">1900 Birrs</span><br>
+                <span class="badge bg-danger ms-2 ml-4">5% OFF</span>
+            </div>
+
+            <div class="mt-auto ml-4">
+                <button id="btn-Shemiz" class="btn btn-outline-success btn-sm w-80 mb-2 btn-success text-white" 
+                    onclick="toggleCart('Babay Shemiz', 90, 'btn-Shemiz')"> 
+                    Add to Cart
+                </button>
+                <button class="btn btn-link btn-sm text-success p-0 text-decoration-none w-100 text-start d-flex align-items-center" 
+                    onclick="handleComment('Babay Shemiz')">
+                    <i class="far fa-comment-dots ml-1"></i> 
+                    <span class="ms-1">Review & Comments</span>
+                    <span class="badge bg-success ms-2 " id="comment-badge-Shemiz">0</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-wide mt-5">
+
+<div class="row">
+<div class="col-md-3 col-sm-6 mb-4">
+    <div class="ms-card" style="background: transparent; border: none; height: 100%; display: flex; flex-direction: column;">
+        
+        <img src="img/pink.jpg" alt="Dresses" style="height: 350px; object-fit: contain; width: 100%; padding: 10px;">
+        
+        <div class="ms-card-body" style="padding: 15px; flex-grow: 1; display: flex; flex-direction: column;">
+            <h6 class="fw-bold mb-1 text-success ms-card-title">Pink Dress</h6>
+            <small class="text-muted d-block mb-2 ml-4">Best quality Dress</small>
+            
+            <div class="star-rating mb-2 ml-4" id="rating-Dress" style="font-size: 1rem; cursor: pointer;">
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Dress', 1)" data-val="1"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Dress', 2)" data-val="2"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Dress', 3)" data-val="3"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Dress', 4)" data-val="4"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Dress', 5)" data-val="5"></i>
+                <small class="text-muted" id="count-Dress">(0)</small>
+            </div>
+
+            <div class="price-info mb-1">
+                <span class="text-muted text-decoration-line-through small ml-4">2400 Birrs</span>
+                <span class="text-success fw-bold fs-5 ms-2">2000 Birrs</span><br>
+                <span class="badge bg-danger ms-2 ml-4">15% OFF</span>
+            </div>
+
+            <div class="mt-auto ml-4">
+                <button id="btn-Dress" class="btn btn-outline-success btn-sm w-80 mb-2 btn-success text-white" 
+                    onclick="toggleCart('Babay Dress', 90, 'btn-Dress')"> 
+                    Add to Cart
+                </button>
+                <button class="btn btn-link btn-sm text-success p-0 text-decoration-none w-100 text-start d-flex align-items-center" 
+                    onclick="handleComment('Babay Dress')">
+                    <i class="far fa-comment-dots ml-1"></i> 
+                    <span class="ms-1">Review & Comments</span>
+                    <span class="badge bg-success ms-2 " id="comment-badge-Dress">0</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="commentSection" style="display:none; position:fixed; top:20%; left:30%; width:40%; background:white; padding:20px; border:1px solid #ccc; z-index:1000; border-radius:10px; box-shadow: 0px 4px 15px rgba(0,0,0,0.2);">
+    <h5 id="modalTitle"></h5>
+    <div id="oldComments" style="max-height: 150px; overflow-y: auto; margin-bottom: 10px; font-size: 0.9rem; color: #555;"></div>
+    <textarea id="commentInput" class="form-control" placeholder="Write your comment..."></textarea>
+    <button class="btn btn-success btn-sm mt-2" onclick="saveComment()">Submit</button>
+    <button class="btn btn-light btn-sm mt-2" onclick="document.getElementById('commentSection').style.display='none'">Close</button>
+</div>
+
+<div class="col-md-3 col-sm-6 mb-4">
+    <div class="ms-card" style="background: transparent; border: none; height: 100%; display: flex; flex-direction: column;">
+        
+        <img src="img/jeans.jpg" alt="jeans" style="height: 350px; object-fit: contain; width: 100%; padding: 10px;">
+        
+        <div class="ms-card-body" style="padding: 15px; flex-grow: 1; display: flex; flex-direction: column;">
+            <h6 class="fw-bold mb-1 text-success ms-card-title">Jeans Dress</h6>
+            <small class="text-muted d-block mb-2 ml-4">Best quality Jeans </small>
+            
+            <div class="star-rating mb-2 ml-4" id="rating-Jeans " style="font-size: 1rem; cursor: pointer;">
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Jeans', 1)" data-val="1"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Jeans', 2)" data-val="2"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Jeans', 3)" data-val="3"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Jeans', 4)" data-val="4"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Jeans', 5)" data-val="5"></i>
+                <small class="text-muted" id="count-Jeans">(0)</small>
+            </div>
+
+            <div class="price-info mb-1">
+                <span class="text-muted text-decoration-line-through small ml-4">3800 Birrs</span>
+                <span class="text-success fw-bold fs-5 ms-2">3500 Birrs</span><br>
+                <span class="badge bg-danger ms-2 ml-4">10% OFF</span>
+            </div>
+
+            <div class="mt-auto ml-4">
+                <button id="btn-Jeans" class="btn btn-outline-success btn-sm w-80 mb-2 btn-success text-white" 
+                    onclick="toggleCart('Jeans Dress', 90, 'btn-Jeans')"> 
+                    Add to Cart
+                </button>
+                <button class="btn btn-link btn-sm text-success p-0 text-decoration-none w-100 text-start d-flex align-items-center" 
+                    onclick="handleComment('Jeans Dress)">
+                    <i class="far fa-comment-dots ml-1"></i> 
+                    <span class="ms-1">Review & Comments</span>
+                    <span class="badge bg-success ms-2 comment-badge" id="comment-badge-Jeans">0</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="commentSection" style="display:none; position:fixed; top:20%; left:30%; width:40%; background:white; padding:20px; border:1px solid #ccc; z-index:1000; border-radius:10px; box-shadow: 0px 4px 15px rgba(0,0,0,0.2);">
+    <h5 id="modalTitle"></h5>
+    <div id="oldComments" style="max-height: 150px; overflow-y: auto; margin-bottom: 10px; font-size: 0.9rem; color: #555;"></div>
+    <textarea id="commentInput" class="form-control" placeholder="Write your comment..."></textarea>
+    <button class="btn btn-success btn-sm mt-2" onclick="saveComment()">Submit</button>
+    <button class="btn btn-light btn-sm mt-2" onclick="document.getElementById('commentSection').style.display='none'">Close</button>
+</div>
+<div class="col-md-3 col-sm-6 mb-4">
+    <div class="ms-card" style="background: transparent; border: none; height: 100%; display: flex; flex-direction: column;">
+        
+        <img src="img/color.jpg" alt="Ball" style="height: 350px; object-fit: contain; width: 100%; padding: 10px;">
+        
+        <div class="ms-card-body" style="padding: 15px; flex-grow: 1; display: flex; flex-direction: column;">
+            <h6 class="fw-bold mb-1 text-success ms-card-title">Color Ball</h6>
+            <small class="text-muted d-block mb-2 ml-4">Best quality Color Ball </small>
+            
+            <div class="star-rating mb-2 ml-4" id="rating-Color" style="font-size: 1rem; cursor: pointer;">
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Color', 1)" data-val="1"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Color', 2)" data-val="2"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Color', 3)" data-val="3"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Color', 4)" data-val="4"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Color', 5)" data-val="5"></i>
+                <small class="text-muted" id="count-Color">(0)</small>
+            </div>
+
+            <div class="price-info mb-1">
+                <span class="text-muted text-decoration-line-through small ml-4">500 Birrs</span>
+                <span class="text-success fw-bold fs-5 ms-2">400 Birrs</span><br>
+                <span class="badge bg-danger ms-2 ml-4">20% OFF</span>
+            </div>
+
+            <div class="mt-auto ml-4">
+                <button id="btn-Color" class="btn btn-outline-success btn-sm w-80 mb-2 btn-success text-white" 
+                    onclick="toggleCart('Color Ball', 90, 'btn-Color')"> 
+                    Add to Cart
+                </button>
+                <button class="btn btn-link btn-sm text-success p-0 text-decoration-none w-100 text-start d-flex align-items-center" 
+                    onclick="handleComment('Color Ball')">
+                    <i class="far fa-comment-dots ml-1"></i> 
+                    <span class="ms-1">Review & Comments</span>
+                    <span class="badge bg-success ms-2 " id="comment-badge-Color">0</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-3 col-sm-6 mb-4">
+    <div class="ms-card" style="background: transparent; border: none; height: 100%; display: flex; flex-direction: column;">
+        
+        <img src="img/ball.jpg" alt="Ball" style="height: 350px; object-fit: contain; width: 100%; padding: 10px;">
+        
+        <div class="ms-card-body" style="padding: 15px; flex-grow: 1; display: flex; flex-direction: column;">
+            <h6 class="fw-bold mb-1 text-success ms-card-title">Ball</h6>
+            <small class="text-muted d-block mb-2 ml-4">Best quality Ball</small>
+            
+            <div class="star-rating mb-2 ml-4" id="rating-Ball" style="font-size: 1rem; cursor: pointer;">
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Ball', 1)" data-val="1"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Ball', 2)" data-val="2"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Ball', 3)" data-val="3"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Ball', 4)" data-val="4"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Ball', 5)" data-val="5"></i>
+                <small class="text-muted" id="count-Ball">(0)</small>
+            </div>
+
+            <div class="price-info mb-1">
+                <span class="text-muted text-decoration-line-through small ml-4">600 Birrs</span>
+                <span class="text-success fw-bold fs-5 ms-2">600 Birrs</span><br>
+                <span class="badge bg-danger ms-2 ml-4">2% OFF</span>
+            </div>
+
+            <div class="mt-auto ml-4">
+                <button id="btn-Ball" class="btn btn-outline-success btn-sm w-80 mb-2 btn-success text-white" 
+                    onclick="toggleCart('Ball', 90, 'btn-Ball')"> 
+                    Add to Cart
+                </button>
+                <button class="btn btn-link btn-sm text-success p-0 text-decoration-none w-100 text-start d-flex align-items-center" 
+                    onclick="handleComment('Ball')">
+                    <i class="far fa-comment-dots ml-1"></i> 
+                    <span class="ms-1">Review & Comments</span>
+                    <span class="badge bg-success ms-2 " id="comment-badge-Ball">0</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="col-md-3 col-sm-6 mb-4">
+    <div class="ms-card" style="background: transparent; border: none; height: 100%; display: flex; flex-direction: column;">
+        
+        <img src="img/tablet.jpg" alt="Tablets" style="height: 350px; object-fit: contain; width: 100%; padding: 10px;">
+        
+        <div class="ms-card-body" style="padding: 15px; flex-grow: 1; display: flex; flex-direction: column;">
+            <h6 class="fw-bold mb-1 text-success ms-card-title">Tablets</h6>
+            <small class="text-muted d-block mb-2 ml-4">Best quality Tablets</small>
+            
+            <div class="star-rating mb-2 ml-4" id="rating-Tablets" style="font-size: 1rem; cursor: pointer;">
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Tablets', 1)" data-val="1"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Tablets', 2)" data-val="2"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Tablets', 3)" data-val="3"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Tablets', 4)" data-val="4"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Tablets', 5)" data-val="5"></i>
+                <small class="text-muted" id="count-Tablets">(0)</small>
+            </div>
+
+            <div class="price-info mb-1">
+                <span class="text-muted text-decoration-line-through small ml-4">3800 Birrs</span>
+                <span class="text-success fw-bold fs-5 ms-2">3800 Birrs</span><br>
+                <span class="badge bg-danger ms-2 ml-4">% OFF</span>
+            </div>
+
+            <div class="mt-auto ml-4">
+                <button id="btn-Tablets" class="btn btn-outline-success btn-sm w-80 mb-2 btn-success text-white" 
+                    onclick="toggleCart('Tablets', 90, 'btn-Tablets')"> 
+                    Add to Cart
+                </button>
+                <button class="btn btn-link btn-sm text-success p-0 text-decoration-none w-100 text-start d-flex align-items-center" 
+                    onclick="handleComment('Tablets')">
+                    <i class="far fa-comment-dots ml-1"></i> 
+                    <span class="ms-1">Review & Comments</span>
+                    <span class="badge bg-success ms-2 " id="comment-badge-Tablets">0</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-3 col-sm-6 mb-4">
+    <div class="ms-card" style="background: transparent; border: none; height: 100%; display: flex; flex-direction: column;">
+        
+        <img src="img/puzzel.jpg" alt="Puzzel" style="height: 350px; object-fit: contain; width: 100%; padding: 10px;">
+        
+        <div class="ms-card-body" style="padding: 15px; flex-grow: 1; display: flex; flex-direction: column;">
+            <h6 class="fw-bold mb-1 text-success ms-card-title">Puzzel</h6>
+            <small class="text-muted d-block mb-2 ml-4">Best quality Puzzel</small>
+            
+            <div class="star-rating mb-2 ml-4" id="rating-Puzzel" style="font-size: 1rem; cursor: pointer;">
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Puzzel', 1)" data-val="1"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Puzzel', 2)" data-val="2"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Puzzel', 3)" data-val="3"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Puzzel', 4)" data-val="4"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Puzzel', 5)" data-val="5"></i>
+                <small class="text-muted" id="count-Puzzel">(0)</small>
+            </div>
+
+            <div class="price-info mb-1">
+                <span class="text-muted text-decoration-line-through small ml-4">800 Birrs</span>
+                <span class="text-success fw-bold fs-5 ms-2">600 Birrs</span><br>
+                <span class="badge bg-danger ms-2 ml-4">25% OFF</span>
+            </div>
+
+            <div class="mt-auto ml-4">
+                <button id="btn-Puzzel" class="btn btn-outline-success btn-sm w-80 mb-2 btn-success text-white" 
+                    onclick="toggleCart('Puzzel', 90, 'btn-Puzzel')"> 
+                    Add to Cart
+                </button>
+                <button class="btn btn-link btn-sm text-success p-0 text-decoration-none w-100 text-start d-flex align-items-center" 
+                    onclick="handleComment('Puzzel')">
+                    <i class="far fa-comment-dots ml-1"></i> 
+                    <span class="ms-1">Review & Comments</span>
+                    <span class="badge bg-success ms-2 " id="comment-badge-Puzzel">0</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-3 col-sm-6 mb-4">
+    <div class="ms-card" style="background: transparent; border: none; height: 100%; display: flex; flex-direction: column;">
+        
+        <img src="img/cars.jpg" alt="Cars" style="height: 350px; object-fit: contain; width: 100%; padding: 10px;">
+        
+        <div class="ms-card-body" style="padding: 15px; flex-grow: 1; display: flex; flex-direction: column;">
+            <h6 class="fw-bold mb-1 text-success ms-card-title"> Cars</h6>
+            <small class="text-muted d-block mb-2 ml-4">Best quality Cars</small>
+            
+            <div class="star-rating mb-2 ml-4" id="rating-Cars" style="font-size: 1rem; cursor: pointer;">
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Cars', 1)" data-val="1"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Cars', 2)" data-val="2"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Cars', 3)" data-val="3"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Cars', 4)" data-val="4"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Cars', 5)" data-val="5"></i>
+                <small class="text-muted" id="count-Cars">(0)</small>
+            </div>
+
+            <div class="price-info mb-1">
+                <span class="text-muted text-decoration-line-through small ml-4">2300 Birrs</span>
+                <span class="text-success fw-bold fs-5 ms-2">2000 Birrs</span><br>
+                <span class="badge bg-danger ms-2 ml-4">8% OFF</span>
+            </div>
+
+            <div class="mt-auto ml-4">
+                <button id="btn-Cars" class="btn btn-outline-success btn-sm w-80 mb-2 btn-success text-white" 
+                    onclick="toggleCart('Cars', 90, 'btn-Cars')"> 
+                    Add to Cart
+                </button>
+                <button class="btn btn-link btn-sm text-success p-0 text-decoration-none w-100 text-start d-flex align-items-center" 
+                    onclick="handleComment('Cars')">
+                    <i class="far fa-comment-dots ml-1"></i> 
+                    <span class="ms-1">Review & Comments</span>
+                    <span class="badge bg-success ms-2 " id="comment-badge-Cars">0</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-md-3 col-sm-6 mb-4">
+    <div class="ms-card" style="background: transparent; border: none; height: 100%; display: flex; flex-direction: column;">
+        
+        <img src="img/toys.jpg" alt="Toys" style="height: 350px; object-fit: contain; width: 100%; padding: 10px;">
+        
+        <div class="ms-card-body" style="padding: 15px; flex-grow: 1; display: flex; flex-direction: column;">
+            <h6 class="fw-bold mb-1 text-success ms-card-title">Babay Toys</h6>
+            <small class="text-muted d-block mb-2 ml-4">Best quality Toys</small>
+            
+            <div class="star-rating mb-2 ml-4" id="rating-Toys" style="font-size: 1rem; cursor: pointer;">
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Toys', 1)" data-val="1"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Toys', 2)" data-val="2"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Toys', 3)" data-val="3"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Toys', 4)" data-val="4"></i>
+                <i class="fa fa-star text-secondary" onclick="rateProduct('Toys', 5)" data-val="5"></i>
+                <small class="text-muted" id="count-Toys">(0)</small>
+            </div>
+
+            <div class="price-info mb-1">
+                <span class="text-muted text-decoration-line-through small ml-4">3000 Birrs</span>
+                <span class="text-success fw-bold fs-5 ms-2"> 2000irrs</span><br>
+                <span class="badge bg-danger ms-2 ml-4">35% Big OFF</span>
+            </div>
+
+            <div class="mt-auto ml-4">
+                <button id="btn-Toys" class="btn btn-outline-success btn-sm w-80 mb-2 btn-success text-white" 
+                    onclick="toggleCart('Babay Toys', 90, 'btn-Toys')"> 
+                    Add to Cart
+                </button>
+                <button class="btn btn-link btn-sm text-success p-0 text-decoration-none w-100 text-start d-flex align-items-center" 
+                    onclick="handleComment('Babay Toys')">
+                    <i class="far fa-comment-dots ml-1"></i> 
+                    <span class="ms-1">Review & Comments</span>
+                    <span class="badge bg-success ms-2 " id="comment-badge-Toys">0</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<footer class=" bg-sec  text-dark py-5 mt-5 w-100">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-3">
+                <h6 class="text-uppercase fw-bold mb-4 border-bottom pb-2 border-success" style="width: 50px;">Brand</h6>
+                <p class="small opacity-75">
+                    Premium enterprise solutions for modern commerce. We deliver quality and efficiency at every step of your supply chain.
+                </p>
+               
+            </div>
+
+            
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <h6 class="text-uppercase fw-bold mb-4 border-bottom pb-2 border-success" style="width: 50px;">Info</h6>
+                <ul class="list-unstyled small opacity-75">
+                    <li class="mb-2"><a href="About.html" class="text-dark text-decoration-none footer-link">About Us</a></li>
+                    <li class="mb-2"><a href="About.html" class="text-dark text-decoration-none footer-link">Store Locator</a></li>
+                    <li class="mb-2"><a href="About.html" class="text-dark text-decoration-none footer-link">Sustainability</a></li>
+                    <li class="mb-2"><a href="About.html" class="text-dark text-decoration-none footer-link">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <h6 class="text-uppercase fw-bold mb-4 border-bottom pb-2 border-success" style="width: 50px;">Help</h6>
+                <p class="small opacity-75 mb-2">📍 100 Enterprise Way, NY</p>
+                <p class="small opacity-75 mb-2">📧 support@brand.com</p>
+                
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col text-center border-top border-secondary pt-4">
+                <p class="small opacity-50">&copy; 2026 Enterprise Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+    
+</footer>
+<div class="offcanvas offcanvas-end" tabindex="-1" id="cartSidePanel" aria-labelledby="cartSidePanelLabel">
+    <div class="offcanvas-header border-bottom">
+        <h5 id="cartSidePanelLabel" class="fw-bold text-success"><i class="fas fa-shopping-cart"></i> Your Cart</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    
+    <div class="offcanvas-body" id="cart-items-container">
+        <div class="text-center text-muted mt-5">
+            <i class="fas fa-box-open fs-1 mb-3"></i>
+            <p>Your cart is empty.</p>
+        </div>
+    </div>
+    
+    <div class="offcanvas-footer p-3 border-top bg-light">
+        <div class="d-flex justify-content-between fw-bold fs-5 mb-3">
+            <span>Total:</span>
+            <span id="cart-total-price" class="text-success">0 Birr</span>
+        </div>
+        <button onclick="placeOrder()" class="btn btn-success w-100 mb-2 fw-bold rounded-pill">Order Now</button>
+        <button class="btn w-100 fw-bold rounded-pill text-white" style="background-color: #00AEEF; border: none;">
+            <i class="fas fa-mobile-alt"></i> Buy with Telebirr
+        </button>
+    </div>
+</div>
+
+
+<div class="modal fade" id="ordersModal" tabindex="-1" aria-labelledby="ordersModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title" id="ordersModalLabel font-bold">የእኔ ትዕዛዞች (My Orders)</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="orders-list-container">
+        <div class="text-center p-4">
+            <i class="fas fa-history fs-1 text-muted mb-2"></i>
+            <p>No Order Yet</p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary w-100" data-bs-dismiss="modal">ዝጋ (Close)</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="logoutModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 9999; align-items: center; justify-content: center;">
+    <div style="background: white; padding: 25px; border-radius: 15px; width: 300px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
+        <h5 class="fw-bold mb-3">እርግጠኛ ነዎት?</h5>
+        <p class="text-muted small mb-4">ከአካውንትዎ መውጣት ይፈልጋሉ?</p>
+        <div class="d-flex justify-content-center gap-2">
+            <button onclick="closeLogoutModal()" class="btn btn-light btn-sm px-3 rounded-pill">ይቅር</button>
+            <button onclick="confirmLogout()" class="btn btn-danger btn-sm px-3 rounded-pill">አዎ ውጣ</button>
+        </div>
+    </div>
+</div>
+<div id="success-toast" style="display:none; position:fixed; top:20px; right:20px; background:#28a745; color:white; padding:15px; border-radius:8px; z-index:2000;">
+    ✓ Comment added successfully!
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="acc.js"></script>
+<script src="log.js"></script>
+ <script src="hpg.js"></script>
+<script>
+
+    const myCarousel = document.querySelector('#heroCarousel');
+    const carousel = new bootstrap.Carousel(myCarousel, {
+        interval: 5000,
+        pause: false
+    });
+
+    const playPauseBtn = document.getElementById('playPauseBtn');
+    let isPaused = false;
+
+    playPauseBtn.addEventListener('click', () => {
+        if (isPaused) {
+            carousel.cycle();
+            playPauseBtn.innerText = '⏸';
+        } else {
+            carousel.pause();
+            playPauseBtn.innerText = '▶';
+        }
+        isPaused = !isPaused;
+    });
+
+    function btnNext() { carousel.next(); }
+    function btnPrev() { carousel.prev(); }
+
+    let progress = 0;
+    const bar = document.getElementById('bar');
+    setInterval(() => {
+        if (!isPaused) {
+            progress += 1;
+            if (progress > 100) progress = 0;
+            bar.style.width = progress + '%';
+        }
+    }, 50);
+
+    myCarousel.addEventListener('slide.bs.carousel', () => {
+        progress = 0;
+    });
+let myCart = [];
+
+function handleCart(btn, name, price) {
+    const index = myCart.findIndex(item => item.name === name);
+
+    if (index === -1) {
+        myCart.push({ name, price });
+        btn.innerText = "Remove from cart";
+        btn.classList.replace("btn-success", "btn-danger");
+        btn.style.transform = "scale(0.95)";
+        setTimeout(() => btn.style.transform = "scale(1)", 100);
+    } else {
+        myCart.splice(index, 1);
+        btn.innerText = "Add to cart";
+        btn.classList.replace("btn-danger", "btn-success");
+    }
+
+    updateBasketUI();
+}
+
+function updateBasketUI() {
+    const badge = document.getElementById('cart-count');
+    if (badge) badge.innerText = myCart.length;
+    const basketList = document.getElementById('basket-list');
+    const totalPriceDisplay = document.getElementById('total-price');
+    
+    if (!basketList) return; 
+
+    let total = 0;
+    basketList.innerHTML = "";
+
+    if (myCart.length === 0) {
+        basketList.innerHTML = '<p class="text-center text-muted mt-5">ቅርጫቱ ባዶ ነው</p>';
+    } else {
+        myCart.forEach((item) => {
+            total += item.price;
+            basketList.innerHTML += `
+                <div class="d-flex justify-content-between align-items-center mb-2 p-2 bg-light rounded shadow-sm">
+                    <div style="font-size: 12px;">
+                        <span class="fw-bold d-block">${item.name}</span>
+                        <span class="text-success">${item.price} Birr</span>
+                    </div>
+                    <i class="fas fa-trash-alt text-danger" style="cursor:pointer" onclick="removeFromBasket('${item.name}')"></i>
+                </div>
+            `;
+        });
+    }
+    if (totalPriceDisplay) totalPriceDisplay.innerText = total + " Birr";
+}
+
+function removeFromBasket(name) {
+    myCart = myCart.filter(item => item.name !== name);
+    updateBasketUI();
+    
+    const buttons = document.querySelectorAll('.btn-cart');
+    buttons.forEach(btn => {
+        if (btn.getAttribute('onclick').includes(`'${name}'`)) {
+            btn.innerText = "Add to cart";
+            btn.classList.replace("btn-danger", "btn-success");
+        }
+    });
+}
+
+function handleRate(star, num) {
+    const parent = star.parentElement;
+    const stars = parent.querySelectorAll('i');
+    const submitBtn = parent.nextElementSibling;
+
+    stars.forEach((s, i) => {
+        if (i < num) {
+            s.classList.replace('far', 'fas'); 
+        } else {
+            s.classList.replace('fas', 'far'); 
+        }
+    });
+    
+    if (submitBtn) submitBtn.style.display = "block"; 
+}
+
+function finalSubmit(btn) {
+    btn.parentElement.innerHTML = "<small class='text-success fw-bold'>Rated! ✅</small>";
+}
+
+function handleCommentToggle(el) {
+    const card = el.closest('.product-card');
+    const box = card.querySelector('.comment-box');
+    const inputArea = box.querySelector('.input-area');
+    const loginMsg = box.querySelector('.login-msg');
+    
+    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+
+    box.style.display = (box.style.display === "none") ? "block" : "none";
+
+    if (isLoggedIn) {
+        inputArea.style.display = "block";
+        loginMsg.style.display = "none";
+    } else {
+        inputArea.style.display = "none";
+        loginMsg.style.display = "block";
+    }
+}
+
+function sendComment(btn) {
+    const input = btn.previousElementSibling;
+    const list = btn.closest('.comment-box').querySelector('.old-comments');
+    const user = localStorage.getItem("userName") || "User";
+
+    if (input.value.trim() !== "") {
+        if (list.innerText.includes("ምንም")) list.innerHTML = "";
+        
+        const newComm = document.createElement('div');
+        newComm.style = "border-bottom: 1px solid #eee; margin-bottom: 4px; padding-bottom: 2px;";
+        newComm.innerHTML = `<strong>${user}:</strong> ${input.value}`;
+        list.prepend(newComm);
+        input.value = "";
+    }
+}
+
+function toggleBasket() {
+    const modal = document.getElementById('basketModal');
+    if (!modal) return;
+    
+    if (modal.style.right === "0px") {
+        modal.style.right = "-350px";
+    } else {
+        modal.style.right = "0px";
+    }
+}
+</script>
+</body>
+</html>

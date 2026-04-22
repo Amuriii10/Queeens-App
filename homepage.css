@@ -1,0 +1,242 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI', sans-serif;
+}
+
+body{
+  background:#f5fff7;
+}
+.navbar .nav-link {
+  color: #333;
+}
+
+.navbar .nav-link:hover {
+  color: #034d22;
+}
+
+.navbar input {
+  border: 1px solid #ddd;
+}
+
+/
+.navbar .nav-link:hover {
+  color: #42cf7d;
+  text-decoration: underline;
+  opacity: 0.9;
+}
+.category-nav {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.category-nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+/* አይጥ ሲያርፍበት ወይም ሲመረጥ የሚሆን ቀለም */
+.category-nav a:hover {
+    /* background-color: #2e7d32; */
+    color: rgba(2, 110, 38, 0.801);
+    text-decoration: underline;
+}
+
+/* ገጹ ቀስ ብሎ እንዲንሸራተት */
+html {
+    scroll-behavior: smooth;
+    /* ማውጫው እንዳይሸፍነው ትንሽ ክፍተት መስጠት */
+    scroll-padding-top: 70px; 
+}
+#timer-box {
+    background-color:  red; /* ቀይ/ብርቱካናማ ለጥንቃቄ */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 15px;
+    font-family: 'Courier New', Courier, monospace; /* የዲጂታል ሰዓት እንዲመስል */
+}
+ #weekly-countdown {
+    /* font-size: 24px; */
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-top: 10px;
+     background-color:  red; /* ቀይ/ብርቱካናማ ለጥንቃቄ */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 15px;
+    font-family: 'Courier New', Courier, monospace; የዲጂታል ሰዓት እንዲመስል
+}
+
+ .feedback-button {
+            position: fixed;
+            left: 20px;
+            bottom: 20px;
+            background-color: #086c44;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+/* HERO */
+.hero {
+  height:700px;
+   background:linear-gradient(rgba(0,50,30,0.7), rgba(0,50,30,0.7)),
+  url('img/drinks.jpg') ; 
+  background-position: center;
+  background-size:cover;
+  display:flex;
+  align-items:center;
+  padding-left:60px;
+  color:white;
+}
+ 
+.hero h1{
+  font-size:36px;
+  display: flex;
+}
+
+/* INFO STRIP */
+.info-strip{
+  /* display:flex; */
+  justify-content:space-around;
+  /* background:#27ae60; */
+  color:rgb(34, 33, 33);
+  padding:10px;
+}
+ .ms-card {
+            /* border: none; */
+            /* border-radius: 0; */
+            background: transparent;
+            margin-bottom: 3rem;
+            transition: transform 0.2s ease;
+            height: 450px;
+        }
+        .ms-card3px {
+            height: 450px;
+        }
+        /* .ms-card:hover { transform: translateY(-5px); } */
+        .ms-card img { width: 100%; }
+        .ms-card-body { padding: 20px 0; }
+        .ms-card-title { color: #068b58; font-size: 25px; font-weight: 700; margin-bottom: 10px; margin-left: 20px; }
+        .card-text { margin-left: 5px; }
+        .ms-card-link {
+            background-color: #046127;
+            color: #fff;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+            margin-left: 5px;
+            padding: 8px 16px;
+            border-radius: 4px;
+            border: none;
+        }
+        .ms-card-link:hover { background-color: #134409;
+                             color: #fff;
+        }
+
+        .container-wide { max-width: 1600px; margin: 0 auto; padding: 0 5%; }
+        .section-title { font-weight: 600; font-size: 28px; margin: 40px 0 24px 0; }
+        
+        .ms-badge {
+            background: #ffb900;
+            color: #000;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 2px 12px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+.eight-col {
+  width: 300px;
+}
+/* መደበኛው (White Mode) ቀለሞች */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --card-bg: #f9f9f9;
+    --header-bg: #2e7d32; /* ያንተ አረንጓዴ */
+}
+
+/* የ Dark Mode ቀለሞች */
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --card-bg: #1e1e1e;
+    --header-bg: #1b5e20;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: 0.3s; /* ቀለሙ ሲቀየር ለስላሳ እንዲሆን */
+}
+
+.product-card, .discount-card {
+    background-color: var(--card-bg);
+}
+
+.theme-btn {
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 20px;
+    border: 1px solid var(--header-bg);
+    background: none;
+    color: var(--text-color);
+}
+
+.footer-link {
+    transition: all 0.2s ease-in-out;
+}
+
+.footer-link:hover {
+    color: #045526 !important;
+    padding-left: 8px;
+    opacity: 1 !important;
+}
+
+/* Social Icon Hover */
+.hover-opacity-100:hover {
+    opacity: 1 !important;
+    transform: translateY(-2px);
+    display: inline-block;
+}
+
+/* Fix input contrast */
+.footer-section input::placeholder {
+    color: rgba(22, 163, 81, 0.575);
+}
+
+/* Ensure full width footer */
+footer {
+    width: 100%;
+    position: relative;
+    left: 0;
+    right: 0;
+}
+@media(max-width:768px){
+  .eight-col {
+    width: 50%;
+  }
+}
+
